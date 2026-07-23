@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eungyu Kim · Portfolio</title>
+  <meta name="description" content="Turning data into decisions — 김은규 포트폴리오">
 
+  <link rel="icon" href="https://github.com/KEungyu.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="#hero" class="nav-logo">
+    <span class="prompt">$</span>&nbsp;eungyu.dev
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activity">Activity</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="neural-canvas"></canvas>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        <span>AI Engineer · FinTech</span>
+      </div>
+
+      <h1 class="hero-name">
+        Eungyu <span class="accent">Kim</span>
+        <div class="hero-name-ko">김은규</div>
+      </h1>
+
+      <div class="hero-motto">
+        <span class="mono">&gt;</span>
+        <span id="typed"></span><span class="cursor">|</span>
+      </div>
+
+      <p class="hero-desc">
+        데이터와 AI로 금융 문제를 해결해나가는 미래 인재.<br>
+        의미 있는 인사이트로부터 유의미한 결과를 도출합니다.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">
+          View Projects <span>→</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring"></div>
+        <img src="https://github.com/KEungyu.png" alt="Eungyu Kim" class="avatar">
+        <div class="avatar-badge">
+          <span class="pulse"></span> Available
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2>About</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="card-icon">🎓</div>
+      <div class="card-label">Education</div>
+      <div class="card-value">Inha University</div>
+      <div class="card-sub">Computer Science &amp; Engineering</div>
+    </div>
+
+    <div class="about-card">
+      <div class="card-icon">📊</div>
+      <div class="card-label">Bootcamp</div>
+      <div class="card-value">SNU Big Data FinTech</div>
+      <div class="card-sub">서울대 빅데이터 핀테크 전문가 과정</div>
+    </div>
+
+    <div class="about-card">
+      <div class="card-icon">🛡️</div>
+      <div class="card-label">Military</div>
+      <div class="card-value">ROK Air Force</div>
+      <div class="card-sub">대한민국 공군 만기 전역</div>
+    </div>
+
+    <div class="about-card">
+      <div class="card-icon">🧠</div>
+      <div class="card-label">Society</div>
+      <div class="card-value">AI Society</div>
+      <div class="card-sub">인공지능학회 · 연구 및 프로젝트</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2>Skills</h2>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label"><span class="mono">01</span> Languages</div>
+    <div class="skill-tags">
+      <span class="skill-tag primary">Python</span>
+      <span class="skill-tag">C++</span>
+      <span class="skill-tag">SQL</span>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label"><span class="mono">02</span> Data / ML</div>
+    <div class="skill-tags">
+      <span class="skill-tag">pandas</span>
+      <span class="skill-tag">NumPy</span>
+      <span class="skill-tag">scikit-learn</span>
+      <span class="skill-tag">Matplotlib</span>
+      <span class="skill-tag">Seaborn</span>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label"><span class="mono">03</span> Deep Learning &amp; AI</div>
+    <div class="skill-tags">
+      <span class="skill-tag primary">PyTorch</span>
+      <span class="skill-tag primary">TensorFlow</span>
+      <span class="skill-tag">XGBoost</span>
+      <span class="skill-tag">LightGBM</span>
+      <span class="skill-tag">Hugging Face</span>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label"><span class="mono">04</span> Tools</div>
+    <div class="skill-tags">
+      <span class="skill-tag">Git</span>
+      <span class="skill-tag">Jupyter</span>
+      <span class="skill-tag">Docker</span>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label"><span class="mono">05</span> Certifications</div>
+    <div class="skill-tags">
+      <span class="skill-tag primary">SQLD</span>
+      <span class="skill-tag primary">ADsP</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2>Projects</h2>
+  </div>
+
+  <div class="project-card">
+    <div class="project-header">
+      <div>
+        <h3>가짜 의학 정보 신뢰도 측정 모델</h3>
+        <p class="project-sub">Medical Misinformation Credibility Scoring</p>
+      </div>
+      <a href="#" class="project-link">
+        <span>GitHub</span><span>↗</span>
+      </a>
+    </div>
+    <p class="project-desc">
+      온라인 의학 정보의 신뢰도를 자동으로 평가하는 분류 모델.
+      텍스트 특징 추출과 머신러닝 기법을 결합해 허위 정보를 탐지하고
+      신뢰 점수를 산출하는 파이프라인을 구축했습니다.
+    </p>
+    <div class="project-tags">
+      <span class="project-tag">Python</span>
+      <span class="project-tag">scikit-learn</span>
+      <span class="project-tag">NLP</span>
+      <span class="project-tag">Classification</span>
+    </div>
+  </div>
+
+  <!--
+  프로젝트 추가 시 아래 복붙:
+  <div class="project-card">
+    <div class="project-header">
+      <div><h3>제목</h3><p class="project-sub">Subtitle</p></div>
+      <a href="URL" class="project-link"><span>GitHub</span><span>↗</span></a>
+    </div>
+    <p class="project-desc">설명</p>
+    <div class="project-tags"><span class="project-tag">태그</span></div>
+  </div>
+  -->
+</section>
+
+<!-- GITHUB ACTIVITY -->
+<section id="activity">
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <h2>GitHub Activity</h2>
+  </div>
+
+  <div class="snake-wrap">
+    <img
+      src="https://raw.githubusercontent.com/KEungyu/KEungyu/output/github-contribution-grid-snake-dark.svg"
+      alt="GitHub Contribution Snake"
+      class="snake-img"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+    <div class="snake-fallback" style="display:none;">
+      🐍 Snake graph 설정 필요 — GitHub Action 세팅 후 자동 생성됩니다.
+    </div>
+  </div>
+</section>
+
+<!-- VELOG -->
+<section id="velog">
+  <div class="section-head">
+    <span class="section-num">05</span>
+    <h2>Recent Posts</h2>
+    <a href="https://velog.io/@rladmsrb/posts" target="_blank" class="section-link">velog ↗</a>
+  </div>
+
+  <div id="velog-list" class="velog-list">
+    <div class="velog-loading">
+      <span class="mono">$</span> fetching posts<span class="dots">...</span>
+    </div>
+  </div>
+</section>
+
+<!-- FUN FACT -->
+<section id="funfact">
+  <div class="section-head">
+    <span class="section-num">06</span>
+    <h2>Fun Fact</h2>
+  </div>
+
+  <div class="fun-card">
+    <div class="fun-emoji">💪</div>
+    <div class="fun-content">
+      <h3>Gym rat mode: ON</h3>
+      <p>
+        코드 짜다 막히면 헬스장 갑니다. 🏋️‍♂️<br>
+        땀 흘리고 오면 이상하게 오류가 풀려있어요. 🔥<br>
+        <span class="mono muted">// exercise.run() &gt; debug.hard()</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-head">
+    <span class="section-num">07</span>
+    <h2>Contact</h2>
+  </div>
+
+  <p class="contact-intro">
+    함께 만들고 싶은 것이 있다면 언제든 연락 주세요.
+  </p>
+
+  <div class="contact-grid">
+    <a href="mailto:eungu1205@naver.com" class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-info">
+        <div class="contact-label">Email</div>
+        <div class="contact-value">eungu1205@naver.com</div>
+      </div>
+      <span class="contact-arrow">→</span>
+    </a>
+
+    <a href="https://github.com/KEungyu" target="_blank" class="contact-item">
+      <div class="contact-icon">🐙</div>
+      <div class="contact-info">
+        <div class="contact-label">GitHub</div>
+        <div class="contact-value">github.com/KEungyu</div>
+      </div>
+      <span class="contact-arrow">→</span>
+    </a>
+
+    <a href="https://velog.io/@rladmsrb/posts" target="_blank" class="contact-item">
+      <div class="contact-icon">📝</div>
+      <div class="contact-info">
+        <div class="contact-label">Blog</div>
+        <div class="contact-value">velog.io/@rladmsrb</div>
+      </div>
+      <span class="contact-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="mono">© 2025 Eungyu Kim</span>
+    <span class="mono muted">// built with vibes &amp; caffeine ☕</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
