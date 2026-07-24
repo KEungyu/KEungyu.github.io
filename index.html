@@ -1,3 +1,6 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,55 +8,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eungyu Kim · Portfolio</title>
   <meta name="description" content="Turning data into decisions — 김은규 포트폴리오">
-
+ 
   <link rel="icon" href="https://github.com/KEungyu.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
 <div class="grid-bg"></div>
-
-<nav>
-  <a href="#hero" class="nav-logo">
-    <span class="prompt">$</span>&nbsp;eungyu.dev
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#activity">Activity</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
+ 
+<!-- TOP BAR (nav + ticker) -->
+<div class="top-bar">
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <span class="prompt">$</span>&nbsp;eungyu.dev
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#activity">Activity</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- 시장 티커 스트림 -->
+  <div class="ticker-strip">
+    <div class="ticker-track">
+      <span class="ticker-item">KOSPI <b>2,547.35</b> <span class="up">▲ 0.42%</span></span>
+      <span class="ticker-item">KOSDAQ <b>745.20</b> <span class="up">▲ 0.28%</span></span>
+      <span class="ticker-item">S&amp;P 500 <b>5,842.10</b> <span class="down">▼ 0.15%</span></span>
+      <span class="ticker-item">NASDAQ <b>19,234</b> <span class="up">▲ 0.35%</span></span>
+      <span class="ticker-item">BTC <b>$67,340</b> <span class="up">▲ 2.34%</span></span>
+      <span class="ticker-item">ETH <b>$3,120</b> <span class="down">▼ 0.87%</span></span>
+      <span class="ticker-item">USD/KRW <b>1,384.20</b> <span class="up">▲ 0.11%</span></span>
+      <span class="ticker-item">삼성전자 <b>78,500</b> <span class="up">▲ 1.24%</span></span>
+      <!-- seamless loop 복제 -->
+      <span class="ticker-item">KOSPI <b>2,547.35</b> <span class="up">▲ 0.42%</span></span>
+      <span class="ticker-item">KOSDAQ <b>745.20</b> <span class="up">▲ 0.28%</span></span>
+      <span class="ticker-item">S&amp;P 500 <b>5,842.10</b> <span class="down">▼ 0.15%</span></span>
+      <span class="ticker-item">NASDAQ <b>19,234</b> <span class="up">▲ 0.35%</span></span>
+      <span class="ticker-item">BTC <b>$67,340</b> <span class="up">▲ 2.34%</span></span>
+      <span class="ticker-item">ETH <b>$3,120</b> <span class="down">▼ 0.87%</span></span>
+      <span class="ticker-item">USD/KRW <b>1,384.20</b> <span class="up">▲ 0.11%</span></span>
+      <span class="ticker-item">삼성전자 <b>78,500</b> <span class="up">▲ 1.24%</span></span>
+    </div>
+  </div>
+</div>
+ 
 <!-- HERO -->
 <section id="hero">
   <canvas id="neural-canvas"></canvas>
-
+ 
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-tag">
         <span class="dot"></span>
         <span>AI Engineer · FinTech</span>
       </div>
-
+ 
       <h1 class="hero-name">
         Eungyu <span class="accent">Kim</span>
         <div class="hero-name-ko">김은규</div>
       </h1>
-
+ 
       <div class="hero-motto">
         <span class="mono">&gt;</span>
         <span id="typed"></span><span class="cursor">|</span>
       </div>
-
+ 
       <p class="hero-desc">
         데이터와 AI로 금융 문제를 해결해나가는 미래 인재.<br>
         의미 있는 인사이트로부터 유의미한 결과를 도출합니다.
       </p>
-
+ 
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">
           View Projects <span>→</span>
@@ -61,26 +90,70 @@
         <a href="#contact" class="btn btn-ghost">Contact</a>
       </div>
     </div>
-
+ 
     <div class="hero-right">
       <div class="avatar-wrapper">
         <div class="avatar-ring"></div>
         <img src="https://github.com/KEungyu.png" alt="Eungyu Kim" class="avatar">
         <div class="avatar-badge">
-          <span class="pulse"></span> Available
+          <span class="pulse"></span> Live
         </div>
       </div>
     </div>
   </div>
 </section>
-
+ 
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="up">▲</span> PYTHON <span class="up">+∞</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">SQLD <span class="up">CERTIFIED</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item"><span class="up">▲</span> FINTECH <span class="up">+42.7%</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">AI / ML <span class="up">ACTIVE</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">ADSP <span class="up">CERTIFIED</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item"><span class="up">▲</span> PYTORCH <span class="up">+18.3%</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">INHA · CSE</span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item"><span class="up">▲</span> ML / DL <span class="up">+∞</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">SNU · FINTECH</span>
+    <span class="ticker-dot">●</span>
+ 
+    <!-- 무한 스크롤용 복제 -->
+    <span class="ticker-item"><span class="up">▲</span> PYTHON <span class="up">+∞</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">SQLD <span class="up">CERTIFIED</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item"><span class="up">▲</span> FINTECH <span class="up">+42.7%</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">AI / ML <span class="up">ACTIVE</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">ADSP <span class="up">CERTIFIED</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item"><span class="up">▲</span> PYTORCH <span class="up">+18.3%</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">INHA · CSE</span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item"><span class="up">▲</span> ML / DL <span class="up">+∞</span></span>
+    <span class="ticker-dot">●</span>
+    <span class="ticker-item">SNU · FINTECH</span>
+    <span class="ticker-dot">●</span>
+  </div>
+</div>
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="section-head">
     <span class="section-num">01</span>
     <h2>About</h2>
   </div>
-
+ 
   <div class="about-grid">
     <div class="about-card">
       <div class="card-icon">🎓</div>
@@ -88,21 +161,21 @@
       <div class="card-value">Inha University</div>
       <div class="card-sub">Computer Science &amp; Engineering</div>
     </div>
-
+ 
     <div class="about-card">
       <div class="card-icon">📊</div>
       <div class="card-label">Bootcamp</div>
       <div class="card-value">SNU Big Data FinTech</div>
       <div class="card-sub">서울대 빅데이터 핀테크 전문가 과정</div>
     </div>
-
+ 
     <div class="about-card">
       <div class="card-icon">🛡️</div>
       <div class="card-label">Military</div>
       <div class="card-value">ROK Air Force</div>
       <div class="card-sub">대한민국 공군 만기 전역</div>
     </div>
-
+ 
     <div class="about-card">
       <div class="card-icon">🧠</div>
       <div class="card-label">Society</div>
@@ -111,14 +184,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-head">
     <span class="section-num">02</span>
     <h2>Skills</h2>
   </div>
-
+ 
   <div class="skill-block">
     <div class="skill-label"><span class="mono">01</span> Languages</div>
     <div class="skill-tags">
@@ -127,7 +200,7 @@
       <span class="skill-tag">SQL</span>
     </div>
   </div>
-
+ 
   <div class="skill-block">
     <div class="skill-label"><span class="mono">02</span> Data / ML</div>
     <div class="skill-tags">
@@ -138,7 +211,7 @@
       <span class="skill-tag">Seaborn</span>
     </div>
   </div>
-
+ 
   <div class="skill-block">
     <div class="skill-label"><span class="mono">03</span> Deep Learning &amp; AI</div>
     <div class="skill-tags">
@@ -149,7 +222,7 @@
       <span class="skill-tag">Hugging Face</span>
     </div>
   </div>
-
+ 
   <div class="skill-block">
     <div class="skill-label"><span class="mono">04</span> Tools</div>
     <div class="skill-tags">
@@ -158,7 +231,7 @@
       <span class="skill-tag">Docker</span>
     </div>
   </div>
-
+ 
   <div class="skill-block">
     <div class="skill-label"><span class="mono">05</span> Certifications</div>
     <div class="skill-tags">
@@ -167,14 +240,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-head">
     <span class="section-num">03</span>
     <h2>Projects</h2>
   </div>
-
+ 
   <div class="project-card">
     <div class="project-header">
       <div>
@@ -197,7 +270,7 @@
       <span class="project-tag">Classification</span>
     </div>
   </div>
-
+ 
   <!--
   프로젝트 추가 시 아래 복붙:
   <div class="project-card">
@@ -210,26 +283,44 @@
   </div>
   -->
 </section>
-
+ 
 <!-- GITHUB ACTIVITY -->
 <section id="activity">
   <div class="section-head">
     <span class="section-num">04</span>
     <h2>GitHub Activity</h2>
   </div>
-
-  <div class="snake-wrap">
+ 
+  <!-- 활동 그래프 -->
+  <div class="activity-card">
+    <img
+      src="https://github-readme-activity-graph.vercel.app/graph?username=KEungyu&theme=react-dark&hide_border=true&bg_color=12121b&color=06b6d4&line=06b6d4&point=a78bfa&area=true"
+      alt="GitHub Activity Graph"
+      class="activity-img">
+  </div>
+ 
+  <!-- Stats + Streak -->
+  <div class="activity-grid">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=KEungyu&show_icons=true&theme=react&hide_border=true&bg_color=12121b&title_color=06b6d4&icon_color=06b6d4&text_color=eaeaf0"
+      alt="GitHub Stats"
+      class="activity-img">
+    <img
+      src="https://streak-stats.demolab.com/?user=KEungyu&theme=react&hide_border=true&background=12121b&stroke=22222e&ring=06b6d4&fire=06b6d4&currStreakLabel=06b6d4"
+      alt="GitHub Streak"
+      class="activity-img">
+  </div>
+ 
+  <!-- Snake graph (Action 설정 시 자동 노출, 실패 시 자동 숨김) -->
+  <div class="snake-wrap" id="snake-wrap">
     <img
       src="https://raw.githubusercontent.com/KEungyu/KEungyu/output/github-contribution-grid-snake-dark.svg"
       alt="GitHub Contribution Snake"
       class="snake-img"
-      onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-    <div class="snake-fallback" style="display:none;">
-      🐍 Snake graph 설정 필요 — GitHub Action 세팅 후 자동 생성됩니다.
-    </div>
+      onerror="document.getElementById('snake-wrap').style.display='none';">
   </div>
 </section>
-
+ 
 <!-- VELOG -->
 <section id="velog">
   <div class="section-head">
@@ -237,45 +328,46 @@
     <h2>Recent Posts</h2>
     <a href="https://velog.io/@rladmsrb/posts" target="_blank" class="section-link">velog ↗</a>
   </div>
-
+ 
   <div id="velog-list" class="velog-list">
     <div class="velog-loading">
       <span class="mono">$</span> fetching posts<span class="dots">...</span>
     </div>
   </div>
 </section>
-
+ 
 <!-- FUN FACT -->
 <section id="funfact">
   <div class="section-head">
     <span class="section-num">06</span>
     <h2>Fun Fact</h2>
   </div>
-
+ 
   <div class="fun-card">
-    <div class="fun-emoji">💪</div>
+    <div class="fun-emoji">📈</div>
     <div class="fun-content">
-      <h3>Gym rat mode: ON</h3>
+      <h3>Compound growth, off-screen.</h3>
       <p>
-        코드 짜다 막히면 헬스장 갑니다. 🏋️‍♂️<br>
-        땀 흘리고 오면 이상하게 오류가 풀려있어요. 🔥<br>
-        <span class="mono muted">// exercise.run() &gt; debug.hard()</span>
+        <span class="mono cyan">헬스 🏋️</span> · <span class="mono cyan">수영 🏊</span> · <span class="mono cyan">축구 ⚽</span><br>
+        데스크 밖에서 쌓는 꾸준함을 믿습니다.<br>
+        습관은 가장 저평가된 알파(α).<br>
+        <span class="mono muted">// discipline.compound() → long_term.alpha</span>
       </p>
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-head">
     <span class="section-num">07</span>
     <h2>Contact</h2>
   </div>
-
+ 
   <p class="contact-intro">
     함께 만들고 싶은 것이 있다면 언제든 연락 주세요.
   </p>
-
+ 
   <div class="contact-grid">
     <a href="mailto:eungu1205@naver.com" class="contact-item">
       <div class="contact-icon">✉️</div>
@@ -285,7 +377,7 @@
       </div>
       <span class="contact-arrow">→</span>
     </a>
-
+ 
     <a href="https://github.com/KEungyu" target="_blank" class="contact-item">
       <div class="contact-icon">🐙</div>
       <div class="contact-info">
@@ -294,7 +386,7 @@
       </div>
       <span class="contact-arrow">→</span>
     </a>
-
+ 
     <a href="https://velog.io/@rladmsrb/posts" target="_blank" class="contact-item">
       <div class="contact-icon">📝</div>
       <div class="contact-info">
@@ -305,14 +397,15 @@
     </a>
   </div>
 </section>
-
+ 
 <footer>
   <div class="footer-inner">
     <span class="mono">© 2025 Eungyu Kim</span>
     <span class="mono muted">// built with vibes &amp; caffeine ☕</span>
   </div>
 </footer>
-
+ 
 <script src="script.js"></script>
 </body>
 </html>
+ 
