@@ -1,7 +1,7 @@
 /* ============================================
    Eungyu Kim · Portfolio Script
    ============================================ */
- 
+
 /* ─────────────────────────────
    1. 타이핑 애니메이션 (모토)
    ───────────────────────────── */
@@ -10,16 +10,16 @@ const mottos = [
   'Where finance meets AI.',
   'Signal in the noise.',
 ];
- 
+
 const typedEl = document.getElementById('typed');
 let mottoIdx = 0;
 let charIdx = 0;
 let isDeleting = false;
- 
+
 function typeLoop() {
   if (!typedEl) return;
   const current = mottos[mottoIdx];
- 
+
   if (!isDeleting) {
     typedEl.textContent = current.substring(0, charIdx + 1);
     charIdx++;
@@ -42,8 +42,8 @@ function typeLoop() {
   }
 }
 typeLoop();
- 
- 
+
+
 /* ─────────────────────────────
    2. Neural Network Canvas
    ───────────────────────────── */
@@ -51,14 +51,14 @@ const canvas = document.getElementById('neural-canvas');
 if (canvas) {
   const ctx = canvas.getContext('2d');
   let width, height, nodes;
- 
+
   function resize() {
     const hero = document.getElementById('hero');
     width = canvas.width = hero.offsetWidth;
     height = canvas.height = hero.offsetHeight;
     initNodes();
   }
- 
+
   function initNodes() {
     const count = Math.min(60, Math.floor((width * height) / 18000));
     nodes = [];
@@ -73,10 +73,10 @@ if (canvas) {
       });
     }
   }
- 
+
   function draw() {
     ctx.clearRect(0, 0, width, height);
- 
+
     // 노드 이동
     for (const n of nodes) {
       n.x += n.vx;
@@ -84,7 +84,7 @@ if (canvas) {
       if (n.x < 0 || n.x > width) n.vx *= -1;
       if (n.y < 0 || n.y > height) n.vy *= -1;
     }
- 
+
     // 연결선
     const maxDist = 130;
     for (let i = 0; i < nodes.length; i++) {
@@ -107,7 +107,7 @@ if (canvas) {
         }
       }
     }
- 
+
     // 노드
     for (const n of nodes) {
       ctx.fillStyle = n.type === 'g'
@@ -117,30 +117,30 @@ if (canvas) {
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
       ctx.fill();
     }
- 
+
     requestAnimationFrame(draw);
   }
- 
+
   window.addEventListener('resize', resize);
   resize();
   draw();
 }
- 
- 
+
+
 /* ─────────────────────────────
    3. Velog 최신글 불러오기
    ───────────────────────────── */
 const VELOG_RSS = 'https://v2.velog.io/rss/@rladmsrb';
 const RSS2JSON = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(VELOG_RSS)}`;
- 
+
 async function loadVelogPosts() {
   const listEl = document.getElementById('velog-list');
   if (!listEl) return;
- 
+
   try {
     const res = await fetch(RSS2JSON);
     const data = await res.json();
- 
+
     if (!data.items || data.items.length === 0) {
       listEl.innerHTML = `
         <div class="velog-loading">
@@ -148,7 +148,7 @@ async function loadVelogPosts() {
         </div>`;
       return;
     }
- 
+
     const posts = data.items.slice(0, 4); // 최근 4개
     listEl.innerHTML = posts.map(post => `
       <a href="${post.link}" target="_blank" class="velog-post">
@@ -169,7 +169,7 @@ async function loadVelogPosts() {
       </div>`;
   }
 }
- 
+
 function formatDate(dateStr) {
   const d = new Date(dateStr);
   const y = d.getFullYear();
@@ -177,16 +177,16 @@ function formatDate(dateStr) {
   const day = String(d.getDate()).padStart(2, '0');
   return `${y}.${m}.${day}`;
 }
- 
+
 function escapeHtml(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
 }
- 
+
 loadVelogPosts();
- 
- 
+
+
 /* ─────────────────────────────
    4. 부드러운 나타남 (스크롤 시)
    ───────────────────────────── */
@@ -198,11 +198,10 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
- 
+
 document.querySelectorAll('section:not(#hero)').forEach(sec => {
   sec.style.opacity = '0';
   sec.style.transform = 'translateY(20px)';
   sec.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(sec);
 });
- 
